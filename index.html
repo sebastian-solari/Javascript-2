@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ferretería Solari — ConstruMarket</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+
+  <!-- NAVBAR (sticky) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">🏗️ ConstruMarket</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navCollapse">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="#" id="btn-todos">Productos</a>
+          </li>
+          <li class="nav-item">
+            <!-- 'Ofertas' en rojo y con badge - destaca -->
+            <a class="nav-link text-danger fw-bold" href="#" id="btn-ofertas">
+              Ofertas <span id="badge-ofertas" class="badge bg-danger ms-1">-30%</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN GRID -->
+  <main class="container py-4">
+    <h1 class="text-center mb-4">Catálogo de Materiales</h1>
+
+    <div id="productos-row" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+      <!-- Cards generadas dinámicamente -->
+    </div>
+  </main>
+
+  <!-- FLOATING CART BUTTON (estilo MercadoLibre) -->
+  <button id="floating-cart-btn" class="floating-cart btn shadow-lg rounded-circle d-flex align-items-center justify-content-center"
+          type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+    <i class="bi bi-cart3 fs-4"></i>
+    <span id="cart-count" class="cart-badge">0</span>
+  </button>
+
+  <!-- OFFCANVAS CART (panel deslizable a la derecha) -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasCartLabel">🛒 Tu carrito</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <ul id="cart-list" class="list-group mb-3">
+        <!-- items del carrito -->
+      </ul>
+
+      <div class="mt-auto">
+        <div class="d-flex justify-content-between mb-1">
+          <small class="text-muted">Subtotal</small>
+          <strong id="subtotal-offcanvas">$0</strong>
+        </div>
+        <div class="d-flex justify-content-between mb-1">
+          <small class="text-muted">IVA (21%)</small>
+          <strong id="iva-offcanvas">$0</strong>
+        </div>
+        <div class="d-flex justify-content-between mb-3">
+          <div><strong>Total</strong></div>
+          <div><strong id="total-offcanvas">$0</strong></div>
+        </div>
+
+        <div class="d-grid gap-2">
+          <button id="btn-clear" class="btn btn-outline-danger">Vaciar carrito</button>
+          <button id="btn-checkout" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalConfirm">Finalizar compra</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE CONFIRMACIÓN -->
+  <div class="modal fade" id="modalConfirm" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Confirmar compra</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Vas a finalizar la compra por:</p>
+          <p class="h5" id="modal-total-offcanvas">$0</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button id="modal-confirm" class="btn btn-success">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER con contacto -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-2">© 2025 — ConstruMarket</p>
+      <div class="d-flex justify-content-center gap-2">
+        <a href="https://wa.me/5491134567890" target="_blank" class="btn btn-success">
+          <i class="bi bi-whatsapp"></i> WhatsApp
+        </a>
+        <a href="mailto:contacto@construmarket.com" class="btn btn-danger">
+          <i class="bi bi-envelope"></i> Gmail
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

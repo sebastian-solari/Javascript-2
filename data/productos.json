@@ -1,0 +1,12 @@
+[
+  { "id": 1, "nombre": "Bolsa de Cemento Portland 50kg", "precio": 7800, "imagen": "img/cemento.jpg" },
+  { "id": 2, "nombre": "Bolsa de Cal Hidratada 25kg", "precio": 5200, "imagen": "img/cal.jpg" },
+  { "id": 3, "nombre": "Metro cúbico de Arena fina", "precio": 18000, "imagen": "img/arena.jpg" },
+  { "id": 4, "nombre": "Ladrillo común 8x18x33", "precio": 380, "imagen": "img/ladrillos.jpg" },
+  { "id": 5, "nombre": "Hierro del 8mm x 12m", "precio": 9400, "imagen": "img/hierro.jpg" },
+  { "id": 6, "nombre": "Pintura látex interior 20L", "precio": 24500, "imagen": "img/pintura.jpg", "oferta": true },
+  { "id": 7, "nombre": "Cerámica esmaltada 45x45", "precio": 7200, "imagen": "img/ceramica.jpg", "oferta": true },
+  { "id": 8, "nombre": "Yeso en bolsa 25kg", "precio": 5600, "imagen": "img/yeso.jpg" },
+  { "id": 9, "nombre": "Bolsa de Adhesivo para cerámicos 30kg", "precio": 8600, "imagen": "img/adhesivo.jpg" },
+  { "id": 10, "nombre": "Arena gruesa x m³", "precio": 16500, "imagen": "img/arenagruesa.jpg" }
+]
